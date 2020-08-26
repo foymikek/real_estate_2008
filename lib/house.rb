@@ -14,6 +14,14 @@ class House
     @rooms.push(room)
   end
 
+  def above_market_average?
+    if house.price > 500000
+      true
+    else
+      false
+    end
+  end
+
   def rooms_from_category(category)
     @rooms.select do |room|
       room.category == category
@@ -26,6 +34,13 @@ class House
       area += room.area
     end
     p area
+  end
+
+  def details
+
+    menu_names = @dishes.map {|dish| dish.names}.sort
+      (dishes.find {|dish| dish.name == name}.category.to_s).to_sym
+
   end
 
 end
