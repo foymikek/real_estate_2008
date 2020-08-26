@@ -37,9 +37,9 @@ class House
   end
 
   def details
-
-    menu_names = @dishes.map {|dish| dish.names}.sort
-      (dishes.find {|dish| dish.name == name}.category.to_s).to_sym
+    # assign instance variables as hash keys
+    # assign instance variable values as hash values
+    # return hash made. 
 
   end
 
