@@ -14,8 +14,18 @@ class House
     @rooms.push(room)
   end
 
-  def method_name
+  def rooms_from_category(category)
+    @rooms.select do |room|
+      room.category == category
+    end
+  end
 
+  def area
+    area = 0
+    @rooms.each do |room|
+      area += room.area
+    end
+    p area
   end
 
 end
